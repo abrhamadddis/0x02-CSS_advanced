@@ -23,7 +23,11 @@
     --section-title-color: var(--color-black);
 }
 
-
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -84,6 +88,9 @@ hr {
   [type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
+  }
+  img {
+    border-style: none;
   }
   
 .visually-hidden{
