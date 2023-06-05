@@ -25,8 +25,8 @@
 
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
 }
 body {
     color: var(--text-color);
@@ -34,6 +34,10 @@ body {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
+    margin: 0;
+}
+main{
+    display: block;
 }
 header{
     font-weight: var(--font-weight-bold);
@@ -41,6 +45,15 @@ header{
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+a:visited {
+    font-style: italic;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: var(--color-light-grey);
 }
 
 h1 
@@ -51,6 +64,28 @@ h5
 h6 {
     font-family: var(--font-family-title);
 }
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }  
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
 .visually-hidden{
     display: none;
 }
@@ -61,9 +96,18 @@ h6 {
     text-align: var(--section-header-align);
 
 }
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+}
+
 .section-tagline{
     color:var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
+
 }
