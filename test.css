@@ -1,11 +1,8 @@
-h1 {
-    color: blue;
-    background-color: yellow;
-    border: 1px solid black;
-}
-p {
-    color: red;
-}
-.card-category{
-    color:#D73953
-}
+.container {
+    overflow: auto; /* prevent container collapse */
+  }
+  
+  img {
+    float: left; /* float image to the left */
+    margin-right: 10px; /* add some space between image and text */
+  }
