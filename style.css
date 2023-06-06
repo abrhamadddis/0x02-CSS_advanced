@@ -21,6 +21,11 @@
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --footer-padding: 5rem 0 1rem;
 }
 
 *,
@@ -99,8 +104,12 @@ hr {
 .card-category{
     color: var(--color-primary);
 }
+.section{
+    padding: var(--section-padding);
+}
 .section-header{
     text-align: var(--section-header-align);
+    padding: var(--section-header-padding);
 
 }
 .section-title {
@@ -117,4 +126,8 @@ hr {
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
 
+}
+.container{
+    width: 960px;
+    margin: auto;
 }
