@@ -241,10 +241,24 @@ hr {
     text-decoration: var(--button-hover-text-decoration);
     background-color: var(--button-hover-background);
 }
+.card-testimnial{
+   text-align: center; 
+}
+.card-avatar{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+.card-avatar cite{
+    display: block;
+    width: 10rem;
+    height: 10rem;
+}
 .footer-copyright{
     margin: 0, 0;
     font-size: var(--font-size-small);
     color:var(--text-color);
+    
 }
 .footer-address{
     color: var(--text-color);
