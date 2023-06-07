@@ -178,6 +178,11 @@ hr {
     padding: 0 0;
     list-style: none;
 }
+.row::after{
+    content: "";
+    display: table;
+    float: none;
+}
 .col-1-3{
     width: 33%;
     float: left;
