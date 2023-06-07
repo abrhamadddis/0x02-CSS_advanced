@@ -193,6 +193,11 @@ hr {
     float: left;
     padding: 0.5rem 0.5rem;
 }
+[class^="col"] {
+    float: left;
+    padding: 0.5rem 0.5rem;
+
+}
 .footer-copyright{
     margin: 0 0;
     font-size: var(--font-size-small);
