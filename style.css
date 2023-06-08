@@ -193,6 +193,22 @@ hr {
 .nav-link:hover{
     color: var(--nav-item-link-hover);
 }
+.nav-item .nav-link:hover{
+    color:var(--color-white);
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--color-white);;
+    width: 0;
+    height: 20%;
+}
+.nav-link::before:hover{
+    background-color: var(--color-primary);
+    width: 100%;
+}
 .row{
     margin: 0, 0;
     padding: 0, 0;
