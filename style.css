@@ -277,6 +277,8 @@ hr {
 .header-logo a{
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-postion);
+    bottom: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
 }
 .footer-copyright{
     margin: 0, 0;
