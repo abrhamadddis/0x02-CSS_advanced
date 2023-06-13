@@ -430,6 +430,11 @@ html {
 
     --section-tagline-margin: 0;
 }
+[data-section-theme="dark"]{
+    --tex-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    --background-color: var(--color-black);
+}
 
 body {
     color: var(text-color);
@@ -570,6 +575,10 @@ ul.row {
     padding: 0.5rem;
 }
 
+[class^="col-"]{
+    text-align: right;
+}
+
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
@@ -577,5 +586,6 @@ ul.row {
 }
 
 .footer ul {
-    text-align: right;
+    text-align: left;
+    padding: 0.5rem;
 }
