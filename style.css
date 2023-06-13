@@ -429,11 +429,13 @@ html {
     --nav-item-link-hover: var(--color-primary);
 
     --section-tagline-margin: 0;
+
 }
-[data-section-theme="dark"]{
-    --tex-color: var(--color-white);
+
+[data-section-theme="dark"] {
+    --text-color: var(--color-white);
     --section-title-color: var(--color-white);
-    --background-color: var(--color-black);
+    background-color: var(--color-black)
 }
 
 body {
@@ -558,27 +560,27 @@ ul.row {
     padding: 0;
     list-style-type: none;
 }
-.row::after{
-    content: "";
-    display: table;
-    clear: both;
-}
+
 .col-1-3 {
     width: 33.33%;
-    float: left;
-    padding: 0.5rem;
 }
 
 .col-1-2 {
     width: 50%;
-    float: left;
-    padding: 0.5rem;
 }
-
-[class^="col-"]{
-    text-align: right;
+.card-services .card-title{
+    margin: 0;
 }
-
+.card-services a{
+    display: block;
+    padding: 2rem;
+    background-color: (--color-light-grey);
+}
+.card-services a:hover{
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
@@ -586,6 +588,28 @@ ul.row {
 }
 
 .footer ul {
-    text-align: left;
+    text-align: right;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class^="col-"] {
+    float: left;
     padding: 0.5rem;
+}
+
+.footer-address {
+    color: var(--text-color);
+}
+
+.social-link {
+    display: block;
+}
+
+.social-link>svg {
+    fill: var(--text-color);
 }
