@@ -439,6 +439,14 @@ html {
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
+
+    --header-padding: 4rem 0 0;
+    --header-logo-position: relative;
+    --header-logo-link-display: inline-block;
+    --header-logo-link-position: absolute;
+    --header-logo-link-top: -1rem;
+    --header-logo-link-left: 0;
+
 }
 
 [data-section-theme="dark"] {
@@ -645,7 +653,19 @@ ul.row {
     float: left;
     padding: 0.5rem;
 }
+.header{
+    padding: var(--header-padding);
+}
+.header-logo{
+    position: var(--header-logo-position);
 
+}
+.header-logo a{
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
+}
 .footer-address {
     color: var(--text-color);
 }
