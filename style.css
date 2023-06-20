@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
@@ -390,6 +390,7 @@ html {
 }
 
 :root {
+    /* universal */
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
@@ -408,7 +409,7 @@ html {
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
-
+    /* section */
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
@@ -419,7 +420,7 @@ html {
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
-
+    /* navigation */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-family-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -429,7 +430,7 @@ html {
     --nav-item-link-hover: var(--color-white);
 
     --section-tagline-margin: 0;
-
+    /* button */
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
@@ -439,14 +440,13 @@ html {
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
-
+    /* header */
     --header-padding: 4rem 0 0;
     --header-logo-position: relative;
     --header-logo-link-display: inline-block;
     --header-logo-link-position: absolute;
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
-
 }
 
 [data-section-theme="dark"] {
@@ -489,6 +489,21 @@ a:hover {
 
 a:active {
     background-color: var(--color-light-grey);
+}
+
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    border: var(--button-border);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    text-decoration: var(--button-text-decoration);
+}
+
+.button:hover {
+    color: var(--button-hover-color);
+    text-decoration: var(--button-hover-text-decoration);
+    background-color: var(--button-hover-background);
 }
 
 .visually-hidden {
@@ -572,19 +587,6 @@ a:active {
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
-.nav .nav-link::before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: 0.2rem;
-}
-.nav .nav-item:hover .nav-link::before{
-    background-color: var(--color-primary);
-    width: 100%;
-}
 
 ul.row {
     margin: 0;
@@ -599,19 +601,7 @@ ul.row {
 .col-1-2 {
     width: 50%;
 }
-.card-services .card-title{
-    margin: 0;
-}
-.card-services a{
-    display: block;
-    padding: 2rem;
-    background-color: var(--color-light-grey);
-}
-.card-services a:hover{
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-decoration: none;
-}
+
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
@@ -627,59 +617,12 @@ ul.row {
     display: table;
     clear: both;
 }
-.button{
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
-}
-.button:hover{
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background-color: var(--button-hover-background);
-}
-.card-testimonial{
-    text-align: center;
-}
-.card-testimonial .card-avatar{
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-}
-.card-testimonial .card-quote cite{
-    display: block;
-    padding-top: 1rem;
-    color: var(--color-primary);
-}
 
-.section-hero{
-    background-size: 90rem auto;
-}
-.section-hero .section-title{
-    margin-bottom: 5rem;
-}
-.section-hero .section-inner{
-    padding: 10rem 40rem 2rem 0;
-}
 [class^="col-"] {
     float: left;
     padding: 0.5rem;
 }
-.header{
-    padding: var(--header-padding);
-}
-.header-logo{
-    position: var(--header-logo-position);
 
-}
-.header-logo a{
-    display: var(--header-logo-link-display);
-    position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
-}
 .footer-address {
     color: var(--text-color);
 }
@@ -691,3 +634,122 @@ ul.row {
 .social-link>svg {
     fill: var(--text-color);
 }
+
+
+.card-services .card-title {
+    margin: 0;
+}
+
+.card-services a {
+    display: block;
+    padding: 2rem;
+    background-color: var(--color-light-grey);
+}
+
+.card-services a:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card-testimonial {
+    text-align: center;
+}
+
+.card-testimonial .card-avatar {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.card-testimonial .card-quote cite {
+    display: block;
+    padding-top: 1rem;
+    color: var(--color-primary);
+}
+
+.section-hero {
+    background-size: 90rem auto;
+}
+
+.section-hero .section-title {
+    margin-bottom: 5rem;
+}
+
+.section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0;
+}
+
+.header {
+    padding: var(--header-padding);
+}
+
+.header-logo {
+    position: var(--header-logo-position);
+}
+
+.header-logo a {
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
+}
+
+.nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-white);
+    width: 0;
+    height: 0.2rem;
+}
+
+.nav .nav-item:hover .nav-link::before {
+    background-color: var(--color-primary);
+    width: 100%;
+}
+.card-work .card-outer{
+    position: relative;
+    overflow: hidden;
+}
+.card-work .card-image img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+.card-work .card-inner{
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    z-index: 1;
+}
+.card-work:hover .card-inner {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.card-work .card-title{
+    text-align: center;
+    margin: 0;
+    opacity: 0.1;
+    height: 100%;
+    position: relative;
+}
+.card-work .card-title a{
+    display: block;
+    text-decoration: none;
+    padding-top: 45%;
+}
+.card-work .card-title a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+.card-work:hover .card-title {
+    opacity: 1;
+  }
